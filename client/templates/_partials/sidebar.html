@@ -1,24 +1,29 @@
 <template name="sidebar">
     <div id="sidebar-wrapper">
+    {{#if currentUser }}
         <ul class="sidebar-nav">
             <li>
-                <a href="#">Shortcuts</a>
+                <a href="#">My Team</a>
             </li>
             <li>
-                <a href="#">Overview</a>
+                <a href="#">Add/Remove Players</a>
             </li>
             <li>
-                <a href="#">Events</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
+                <a href="#">Team Settings</a>
             </li>
         </ul>
+    {{else}}
+        <ul class="sidebar-nav">
+            <li>Log in to manage your team.</li>
+            <br>
+            <hr>
+            <li>
+                <a href="#">League</a>
+            </li>
+            <li>
+                <a href="#">Teams</a>
+            </li>
+        </ul>
+    {{/if}}
     </div>    <!-- /#sidebar-wrapper -->
 </template>
